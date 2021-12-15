@@ -1,6 +1,6 @@
 # sap-sales-inquiry-sql   
 
-sap-sales-inquiry-sql は、主にエッジアプリケーションにおいて、SAPと連携された販売見積を保存するSQLテーブルを作成するためのレポジトリです。  
+sap-sales-inquiry-sql は、主にエッジアプリケーションにおいて、SAPと連携された販売引合を保存するSQLテーブルを作成するためのレポジトリです。  
 sap-sales-inquiry-sql は、そのままクラウド環境におけるアプリケーションにも、適用可能です。  
 
 ## 前提条件  
@@ -13,10 +13,10 @@ https://api.sap.com/api/OP_API_SALES_INQUIRY_SRV_0001/overview
 
 sap-sales-inquiry-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
-* sap-sales-inquiry-sql-header-data.sql（SAP 販売見積 - ヘッダデータ）
-* sap-sales-inquiry-sql-header-partner-data.sql（SAP 販売見積 - ヘッダ取引先データ）
-* sap-sales-inquiry-sql-item-data.sql（SAP 販売見積 - 明細データ）  
-* sap-sales-inquiry-sql-item-pricing-element-data.sql（SAP 販売見積 - 明細価格条件データ）  
+* sap-sales-inquiry-sql-header-data.sql（SAP 販売引合 - ヘッダデータ）
+* sap-sales-inquiry-sql-header-partner-data.sql（SAP 販売引合 - ヘッダ取引先データ）
+* sap-sales-inquiry-sql-item-data.sql（SAP 販売引合 - 明細データ）  
+* sap-sales-inquiry-sql-item-pricing-element-data.sql（SAP 販売引合 - 明細価格条件データ）  
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法
 
