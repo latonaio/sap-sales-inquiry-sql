@@ -1,9 +1,9 @@
 CREATE TABLE `sap-sales-inquiry-pricing-element-data`
 (
-  `SalesInquiry`               varchar(10) DEFAULT NULL,
-  `SalesInquiryItem`           varchar(6) DEFAULT NULL,
-  `PricingProcedureStep`       varchar(3) DEFAULT NULL,
-  `PricingProcedureCounter`    varchar(3) DEFAULT NULL,
+  `SalesInquiry`               varchar(10) NOT NULL,
+  `SalesInquiryItem`           varchar(6) NOT NULL,
+  `PricingProcedureStep`       varchar(3) NOT NULL,
+  `PricingProcedureCounter`    varchar(3) NOT NULL,
   `ConditionApplication`       varchar(2) DEFAULT NULL,
   `ConditionType`              varchar(4) DEFAULT NULL,
   `PricingDateTime`            datetime DEFAULT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE `sap-sales-inquiry-pricing-element-data`
   `ConditionScaleBasisUnit`    varchar(3) DEFAULT NULL,
   `ConditionScaleBasisCurrency` varchar(5) DEFAULT NULL,
   `ConditionIsManuallyChanged` tinyint(1) DEFAULT NULL,
-  PRIMARY KEY (`SalesInquiry`, `SalesInquiryItem`),
+  PRIMARY KEY (`SalesInquiry`, `SalesInquiryItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
   CONSTRAINT `SalesInquiry_fk` FOREIGN KEY (`SalesInquiry`) REFERENCES `sap-sales-inqriry-header-data` (`SalesInquiry`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

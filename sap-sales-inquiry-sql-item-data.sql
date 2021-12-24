@@ -1,7 +1,7 @@
 CREATE TABLE `sap-sales-inquiry-item-data`
 (
-  `SalesInquiry`                   varchar(10) DEFAULT NULL,
-  `SalesInquiryItem`               varchar(6) DEFAULT NULL,
+  `SalesInquiry`                   varchar(10) NOT NULL,
+  `SalesInquiryItem`               varchar(6) NOT NULL,
   `SalesInquiryItemCategory`       varchar(4) DEFAULT NULL,
   `SalesInquiryItemText`           varchar(40) DEFAULT NULL,
   `PurchaseOrderByCustomer`        varchar(35) DEFAULT NULL,
