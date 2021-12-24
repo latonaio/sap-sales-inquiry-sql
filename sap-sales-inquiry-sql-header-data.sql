@@ -1,6 +1,6 @@
 CREATE TABLE `sap-sales-inquiry-header-data`
 (
-  `SalesInquiry`                    varchar(10) DEFAULT NULL,
+  `SalesInquiry`                    varchar(10) NOT NULL,
   `SalesInquiryType`                varchar(4) DEFAULT NULL,
   `SalesOrganization`               varchar(4) DEFAULT NULL,
   `DistributionChannel`             varchar(2) DEFAULT NULL,
