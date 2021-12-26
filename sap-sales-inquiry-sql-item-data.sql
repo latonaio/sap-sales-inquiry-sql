@@ -1,4 +1,4 @@
-CREATE TABLE `sap-sales-inquiry-item-data`
+CREATE TABLE `sap_sales_inquiry_item_data`
 (
   `SalesInquiry`                   varchar(10) NOT NULL,
   `SalesInquiryItem`               varchar(6) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE `sap-sales-inquiry-item-data`
   `SalesDocumentRjcnReason`        varchar(2) DEFAULT NULL,
   `WBSElement`                     varchar(24) DEFAULT NULL,
   `SDProcessStatus`                varchar(1) DEFAULT NULL,
-  PRIMARY KEY (`SalesInquiry`, `SalesInquiryItem`)
-  CONSTRAINT `SalesInquiry_fk` FOREIGN KEY (`SalesInquiry`) REFERENCES `sap-sales-inquiry-header-data` (`SalesInquiry`)
+  PRIMARY KEY (`SalesInquiry`, `SalesInquiryItem`),
+  CONSTRAINT `SAPSalesInquiryItemData_fk` FOREIGN KEY (`SalesInquiry`) REFERENCES `sap_sales_inquiry_header_data` (`SalesInquiry`)
 ) ENGINE = InnoDB
 DEFAULT CHARSET = utf8mb4;
