@@ -26,6 +26,6 @@ CREATE TABLE `sap_sales_inquiry_item_pricing_element_data`
   `ConditionScaleBasisCurrency` varchar(5) DEFAULT NULL,
   `ConditionIsManuallyChanged` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`SalesInquiry`, `SalesInquiryItem`, `PricingProcedureStep`, `PricingProcedureCounter`),
-  CONSTRAINT `SAPSalesInquiryItemPricingElementData_fk` FOREIGN KEY (`SalesInquiry`) REFERENCES `sap_sales_inqriry_header_data` (`SalesInquiry`)
+  CONSTRAINT `SAPSalesInquiryItemPricingElementData_fk` FOREIGN KEY (`SalesInquiry`) REFERENCES `sap_sales_inquiry_item_data` (`SalesInquiry`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
